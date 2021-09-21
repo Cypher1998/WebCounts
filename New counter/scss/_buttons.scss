@@ -1,0 +1,32 @@
+%btn {
+  border-radius: 6px;
+  padding: $margin/1.7 $margin;
+  font: {
+    family: $font;
+    size: 0.8rem;
+    weight: 600;
+  }
+  margin-right: $margin;
+  font-family: $font;
+  letter-spacing: $spacing * 2;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}
+
+.btn-inc {
+  @extend %btn;
+  border-color: green;
+}
+
+.btn-res {
+  @extend %btn;
+  border-color: darkblue;
+}
+
+.btn-dec {
+  @extend %btn;
+  border-color: red;
+}

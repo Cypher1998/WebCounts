@@ -1,0 +1,75 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $bg-color;
+  color: lighten($bg-color, 80%);
+}
+
+.container {
+  background-color: $ct-color;
+  width: 100vw;
+  text-align: $align;
+  padding: $size 0;
+
+  #title {
+    margin-bottom: $margin;
+    color: #160125;
+    letter-spacing: $spacing;
+    font: {
+      family: $font;
+      size: $margin * 2;
+    }
+  }
+
+  .counter {
+    color: $c-color;
+    font-size: $size * 1.2;
+    font-weight: 700;
+    margin-bottom: $margin;
+  }
+
+  .error {
+    color: $msg-color;
+    background-color: lighten($msg-color, 40%);
+    max-width: 30rem;
+    margin: auto;
+    padding: 15px;
+    border: {
+      color: lighten($msg-color, 20%);
+      radius: 8px;
+      width: 2px;
+      style: solid;
+    }
+    margin-bottom: $margin;
+    letter-spacing: $spacing;
+    font-size: 1.1rem;
+  }
+}
+
+@import 'buttons';
+
+@media (min-width: 640px) {
+  .container {
+    #title {
+      font-size: $margin * 2.8;
+    }
+
+    .counter {
+      font-size: $size * 1.374;
+    }
+
+    .buttons {
+      margin-top: 1.5rem;
+    }
+  }
+}
